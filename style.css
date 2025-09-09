@@ -18,6 +18,7 @@ body {
     justify-content: flex-start; /* MUDANÇA AQUI */
     align-items: center;
 }
+
 /* CSS SECUNDARIO: mecher em coisas mais únicas, como ícones, botões e etc. */
         .login-panel {  /* PAINEL */
             background-color: white;
