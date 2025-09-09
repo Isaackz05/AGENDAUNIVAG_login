@@ -1,0 +1,133 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(to bottom, #306eff, #102c6f);
+    margin: 0;
+    padding: 0;
+    padding-top: 180px; /* AJUSTE: menor = mais para cima, maior = mais para baixo */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* MUDANÇA AQUI */
+    align-items: center;
+}
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 500;
+        }
+
+        .login-panel {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 80px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #ddd;
+            border-radius: 2px;
+            padding: 7px;
+            background-color: #f9f9f9;
+        }
+
+        .input-group i {
+            color: #113280;
+            font-size: 19px;
+        }
+
+        .input-group input {
+            font-weight: 300;
+            border: none;
+            outline: none;
+            background: transparent;
+            flex: 1;
+            font-size: 17px;
+            color: #333;
+        }
+
+        .input-group input::placeholder {
+            color: #888;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .link {
+            color: #113280;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 0;
+            width: fit-content; /* IMPEDE QUE LINKS OCUPEM ESPAÇO CASO AONDE NÃO FORAM ESCRITOS. */
+            transition: all 0.3s ease;
+        }
+
+        .link:hover {
+            color: #5783e5;
+            text-decoration: underline;
+        }
+
+        #botaoEntrar {
+            background-color: #113280;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        #botaoEntrar:hover {
+            background-color: #0e2865;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        #univaglogo {
+            max-width: 300px; /* ALTERE AQUI: Tamanho da logo em desktop */
+            height: auto;
+            margin-bottom: 20px; /* Espaço entre logo e h1 */
+        }
+
+        @media (max-width: 480px) {
+            .login-panel {
+                margin: 20px;
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
