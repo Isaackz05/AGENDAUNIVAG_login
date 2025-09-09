@@ -11,15 +11,7 @@ body {
     align-items: center;
 }
 
-        h1 {
-            color: white;
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5rem;
-            font-weight: 500;
-        }
-
-        .login-panel {
+        .login-panel {  /* PAINEL */
             background-color: white;
             padding: 30px;
             border-radius: 8px;
@@ -31,7 +23,7 @@ body {
             gap: 15px;
         }
 
-        .input-group {
+        .input-group {   /* INPUT DE TEXTO */
             display: flex;
             align-items: center;
             gap: 10px;
@@ -60,13 +52,13 @@ body {
             color: #888;
         }
 
-        .links {
+        .links {     /* GRUPO DE LINK (ESQUECI A SENHA E MANUAL DE ACESSO) */
             display: flex;
             flex-direction: column;
             gap: 4px;
         }
 
-        .link {
+        .link {     /* GRUPO DE LINK (ESQUECI A SENHA E MANUAL DE ACESSO) */
             color: #113280;
             text-decoration: none;
             font-weight: 400;
@@ -84,7 +76,7 @@ body {
             text-decoration: underline;
         }
 
-        #botaoEntrar {
+        #botaoEntrar {  /* BOTAO DE ENTRAR NA PAGINA */
             background-color: #113280;
             color: white;
             border: none;
@@ -100,12 +92,12 @@ body {
             transition: background-color 0.3s ease;
         }
 
-        #botaoEntrar:hover {
+        #botaoEntrar:hover {  /* BOTAO DE ENTRAR NA PAGINA */
             background-color: #0e2865;
         }
 
-        .copyright {
-            text-align: center;
+        .copyright {    /* LEGENDA DE COPYRIGHT */
+            text-align: center;    
             color: #666;
             font-size: 13px;
             margin-top: 20px;
