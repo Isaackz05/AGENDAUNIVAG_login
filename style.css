@@ -3,7 +3,7 @@ body {
     background: linear-gradient(to bottom, #306eff, #102c6f);
     margin: 0;
     padding: 0;
-    padding-top: 180px; /* AJUSTE: menor = mais para cima, maior = mais para baixo */
+    padding-top: 170px; /* AJUSTE: menor = mais para cima, maior = mais para baixo */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
