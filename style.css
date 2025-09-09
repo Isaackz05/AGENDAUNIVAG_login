@@ -122,6 +122,10 @@ body {
             margin-bottom: 20px; /* Espaço entre logo e h1 */
             filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
         }
+        
+        .toggle-password {
+            cursor: pointer;
+        }
 
         @media (max-width: 480px) {
             .login-panel {
