@@ -1,0 +1,20 @@
+.login-button {
+    width: 100%;       /* ⬅ botão ocupa toda a largura do painel */
+    background-color: #113280;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #0e2865;
+}

@@ -1,0 +1,55 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #306eff, #102c6f);
+    margin-top: 0;
+}
+
+body {
+    display: grid;
+    place-items: center; /* centraliza vertical e horizontalmente */
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* espaço entre logo e painel */
+    width: 100%;
+}
+
+.login-panel {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; 
+    filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.2));
+}
+
+/* Copyright / rodapé da página */
+.login-panel .copyright {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .login-panel {
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+}

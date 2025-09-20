@@ -1,0 +1,25 @@
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.link {
+    color: #113280;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    color: #5783e5;
+    text-decoration: underline;
+}

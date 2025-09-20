@@ -1,0 +1,33 @@
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 7px;
+    background-color: #f9f9f9;
+    width: 100%;       /* ⬅ ocupa toda a largura do painel */
+}
+
+.input-group i {
+  color: #113280;
+  font-size: 19px;
+}
+
+.input-group input {
+    font-weight: 300;
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;       /* ⬅ ocupa toda largura do input-group */
+    font-size: 17px;
+    color: #333;
+}
+
+.input-group input::placeholder {
+  color: #888;
+}
+
+.toggle-password {
+  cursor: pointer;
+}
