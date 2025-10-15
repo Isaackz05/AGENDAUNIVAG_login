@@ -1,0 +1,84 @@
+#MODELAGEM
+
+CREATE TABLE Laboratorio 
+( 
+ HorarioFuncional VARCHAR(n) NOT NULL,  
+ Softwares VARCHAR(n) NOT NULL,  
+ Recursos VARCHAR(n) NOT NULL,  
+ NomeLaboratorio VARCHAR(n) NOT NULL,  
+ IdLaboratorio INT PRIMARY KEY AUTO_INCREMENT,  
+ Prioridade VARCHAR(n) NOT NULL,  
+ StatusDisponibilidade VARCHAR(n) NOT NULL,  
+ BlocoPertencente INT,  
+ UNIQUE (BlocoPertencente: FK)
+); 
+
+CREATE TABLE Agendamento 
+( 
+ IdAgendamento INT PRIMARY KEY,  
+ HorarioAgendadoInicial VARCHAR(n),  
+ HorarioAgendadoFinal VARCHAR(n) NOT NULL,  
+ ProfessorSolicitante INT,  
+ StatusAgendamento VARCHAR(n) NOT NULL,  
+ LaboratorioSolicitado INT,  
+ turmaAgendamento VARCHAR(n),  
+ UNIQUE (HorarioAgendadoInicial)
+); 
+
+CREATE TABLE Professor 
+( 
+ CadastroProfessor INT PRIMARY KEY AUTO_INCREMENT,  
+ NomeProfessor VARCHAR(n) NOT NULL,  
+ EmailProfessor VARCHAR(n) NOT NULL,  
+ SenhaProfessor VARCHAR(n) NOT NULL,  
+ Coordenador INT NOT NULL,  
+ UNIQUE (CadastroProfessor: PK,EmailProfessor)
+); 
+
+CREATE TABLE Coordenador 
+( 
+ CadastroCoordenador INT PRIMARY KEY AUTO_INCREMENT,  
+ NomeCoordenador VARCHAR(n) NOT NULL,  
+ EmailCoordenador VARCHAR(n),  
+ SenhaCoordenador VARCHAR(n) NOT NULL,  
+ TipoCursosCoordenados VARCHAR(n) NOT NULL,  
+ UNIQUE (CadastroCoordenador: PK,EmailCoordenador)
+); 
+
+CREATE TABLE Turmas 
+( 
+ IdTurma INT PRIMARY KEY AUTO_INCREMENT,  
+ NomeTurma VARCHAR(n) NOT NULL,  
+ Cursos VARCHAR(n) NOT NULL,  
+ QuantidadeAlunos INT NOT NULL,  
+ Semestre INT NOT NULL,  
+ Descricao VARCHAR(n),  
+ Coordenador VARCHAR(n) NOT NULL,  
+); 
+
+CREATE TABLE Bloco 
+( 
+ IdBloco INT PRIMARY KEY NOT NULL AUTO_INCREMENT,  
+ NomeBloco VARCHAR(n) PRIMARY KEY NOT NULL,  
+ UNIQUE (NomeBloco)
+); 
+
+CREATE TABLE ProfessorTurma 
+( 
+ IdProfessor INT,  
+ IdTurma INT,  
+); 
+
+ALTER TABLE Laboratorio ADD FOREIGN KEY(BlocoPertencente) REFERENCES Bloco (BlocoPertencente)
+ALTER TABLE Agendamento ADD FOREIGN KEY(ProfessorSolicitante) REFERENCES Professor (ProfessorSolicitante)
+ALTER TABLE Agendamento ADD FOREIGN KEY(LaboratorioSolicitado) REFERENCES Laboratorio (LaboratorioSolicitado)
+ALTER TABLE Agendamento ADD FOREIGN KEY(turmaAgendamento) REFERENCES Turmas (turmaAgendamento)
+ALTER TABLE Professor ADD FOREIGN KEY(Coordenador) REFERENCES Coordenador (Coordenador)
+ALTER TABLE Turmas ADD FOREIGN KEY(Coordenador) REFERENCES Coordenador (Coordenador)
+ALTER TABLE Bloco ADD FOREIGN KEY(NomeBloco) REFERENCES undefined (NomeBloco)
+ALTER TABLE ProfessorTurma ADD FOREIGN KEY(IdProfessor) REFERENCES Professor (IdProfessor)
+ALTER TABLE ProfessorTurma ADD FOREIGN KEY(IdTurma) REFERENCES Turmas (IdTurma)
+
+
+##LINK:
+https://app.brmodeloweb.com/#!/publicview/68eeb02f4f27d6fedfac70f3
