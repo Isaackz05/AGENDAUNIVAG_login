@@ -19,7 +19,7 @@ body {
 
 /* === SIDEBAR === */
 .sidebar {
-    width: 300px;
+    width: 245px;
     background: linear-gradient(180deg, #306eff 0%, #1c4ab6 100%);
     color: white;
     display: flex;
