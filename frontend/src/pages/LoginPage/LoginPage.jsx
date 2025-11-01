@@ -1,9 +1,9 @@
 import React from 'react'
 import "../LoginPage/LoginPage.css"
-import Links from './Links/Links'
-import InputGroup from './InputGroup/InputGroup'
-import Logo from './Logo/Logo'
-import LoginButtom from './LoginButtom/LoginButtom'
+import Links from '../../components/LoginPage/Links/Links'
+import InputGroup from '../../components/LoginPage/InputGroup/InputGroup'
+import Logo from '../../components/LoginPage/Logo/Logo'
+import LoginButtom from '../../components/LoginPage/LoginButtom/LoginButtom'
 
 
 const LoginPage = () => {

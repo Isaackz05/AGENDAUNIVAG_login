@@ -1,0 +1,99 @@
+/* === PAINEL DE OPÇÕES === */
+.options-panel {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.options-container {
+    display: flex;
+    gap: 40px;
+    max-width: 600px;
+}
+
+/* Card de opção */
+.option-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+}
+
+.option-circle {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #4A90E2 0%, #1c4398 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(74, 144, 226, 0.3);
+    border: 3px solid rgba(0, 59, 147, 0.5);
+    transition: all 0.3s ease;
+}
+
+.option-card:hover .option-circle {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(74, 144, 226, 0.4);
+}
+
+.option-icon {
+    font-size: 32px;
+    color: white;
+}
+
+.option-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .options-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .options-panel {
+        padding: 80px 20px;
+    }
+
+    .option-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .option-icon {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .options-panel {
+        padding: 60px 20px;
+    }
+
+    .option-circle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .option-icon {
+        font-size: 32px;
+    }
+
+    .option-name {
+        font-size: 13px;
+    }
+}
